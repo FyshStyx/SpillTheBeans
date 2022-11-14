@@ -6,6 +6,7 @@
 extents = Vector2( 33, 44 )
 
 [node name="Can" type="RigidBody2D"]
+gravity_scale = 10.0
 
 [node name="BeanCan" type="Sprite" parent="."]
 scale = Vector2( 0.043, 0.043 )

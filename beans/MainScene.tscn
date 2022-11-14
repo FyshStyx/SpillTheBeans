@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Counter.gd" type="Script" id=1]
 [ext_resource path="res://BeanCan.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HumanHand.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainScene.gd" type="Script" id=4]
+[ext_resource path="res://BeanSpawner.tscn" type="PackedScene" id=6]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -32,11 +33,14 @@ margin_bottom = 179.0
 position = Vector2( 506, 495 )
 
 [node name="Can" parent="." instance=ExtResource( 2 )]
-position = Vector2( 500, 333 )
+position = Vector2( 511, 170 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 
+[node name="BeanSpawner" parent="." instance=ExtResource( 6 )]
+position = Vector2( 512, 97 )
+
 [connection signal="pressed" from="Button" to="Counter" method="_on_Button_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="BeanSpawner" method="_on_Timer_timeout"]
