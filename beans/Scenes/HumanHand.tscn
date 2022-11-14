@@ -5,6 +5,7 @@
 
 [node name="Hand" type="KinematicBody2D"]
 script = ExtResource( 2 )
+speed = 800
 
 [node name="HumanHand" type="Sprite" parent="."]
 scale = Vector2( 0.08, 0.08 )
