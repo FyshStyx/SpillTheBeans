@@ -9,6 +9,9 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Counter" type="RichTextLabel" parent="."]
 anchor_left = 0.5

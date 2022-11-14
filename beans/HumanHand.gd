@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var speed = 400
 var screen_size
 
-
+# TODO make it so point of game is to get "beans" and "spicy beans" to left and right of screen
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size

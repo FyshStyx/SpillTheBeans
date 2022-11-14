@@ -11,7 +11,11 @@ config_version=4
 [application]
 
 config/name="beans"
-config/icon="res://icon.png"
+config/icon="res://bean can.png"
+
+[global]
+
+icon=false
 
 [input]
 
@@ -24,10 +28,6 @@ ui_select={
 "events": [  ]
 }
 ui_cancel={
-"deadzone": 0.5,
-"events": [  ]
-}
-ui_home={
 "deadzone": 0.5,
 "events": [  ]
 }
@@ -60,6 +60,10 @@ ui_page_up={
 "events": [  ]
 }
 ui_page_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_home={
 "deadzone": 0.5,
 "events": [  ]
 }
