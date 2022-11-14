@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Counter.gd" type="Script" id=1]
-[ext_resource path="res://BeanCan.tscn" type="PackedScene" id=2]
-[ext_resource path="res://HumanHand.tscn" type="PackedScene" id=3]
-[ext_resource path="res://MainScene.gd" type="Script" id=4]
-[ext_resource path="res://BeanSpawner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Counter.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/BeanCan.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/HumanHand.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/MainScene.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/BeanSpawner.tscn" type="PackedScene" id=6]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

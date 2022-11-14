@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="beans"
-config/icon="res://bean can.png"
+config/icon="res://Sprites/bean can.png"
 
 [global]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bean can.png-c5900e46d42a87013f00590fd9c29930.stex"
+path="res://.import/human hand.png-09ab7f98c148ce04ebda3d6a717c17ff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bean can.png"
-dest_files=[ "res://.import/bean can.png-c5900e46d42a87013f00590fd9c29930.stex" ]
+source_file="res://Sprites/human hand.png"
+dest_files=[ "res://.import/human hand.png-09ab7f98c148ce04ebda3d6a717c17ff.stex" ]
 
 [params]
 

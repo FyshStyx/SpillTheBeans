@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const can = preload("res://BeanCan.tscn")
+const can = preload("res://Scenes/BeanCan.tscn")
 var screen_size
 export var speed = 400
 var velocity = Vector2.ZERO
