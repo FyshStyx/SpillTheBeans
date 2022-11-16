@@ -24,12 +24,12 @@ func _process(delta):
 
 
 #Toggle stopwatch
-func _on_Button_pressed():
-	if stopwatch_running == true:
-		stopwatch_running = false
-		print("stopped timer")
-	elif stopwatch_running == false:
-		stopwatch_running = true
-		print("started timer")
+#func _on_Button_pressed():
+#	if stopwatch_running == true:
+#		stopwatch_running = false
+#		print("stopped timer")
+#	elif stopwatch_running == false:
+#		stopwatch_running = true
+#		print("started timer")
 		
 
