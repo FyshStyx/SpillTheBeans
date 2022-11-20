@@ -33,7 +33,7 @@ position = Vector2( 506, 495 )
 position = Vector2( 511, 170 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 3.0
 autostart = true
 
 [node name="BeanSpawner" parent="." instance=ExtResource( 6 )]
@@ -50,6 +50,7 @@ physics_material_override = SubResource( 2 )
 position = Vector2( 546.977, 431.695 )
 scale = Vector2( 100, 1 )
 shape = SubResource( 1 )
+disabled = true
 
 [node name="HandBlocker2" type="StaticBody2D" parent="."]
 position = Vector2( -490, -12 )
