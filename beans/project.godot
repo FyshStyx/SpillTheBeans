@@ -13,6 +13,10 @@ config_version=4
 config/name="beans"
 config/icon="res://Sprites/bean can.png"
 
+[display]
+
+window/stretch/mode="2d"
+
 [global]
 
 icon=false
