@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Counter.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BeanCan.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/HumanHand.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Head.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Ear.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/BeanSpawner.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -71,6 +72,9 @@ position = Vector2( 67, 470 )
 
 [node name="testhead4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 960, 84 )
+
+[node name="Ear" parent="." instance=ExtResource( 5 )]
+position = Vector2( 521, 585 )
 
 [connection signal="timeout" from="Timer" to="BeanSpawner" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="testhead1" method="_on_Timer_timeout"]

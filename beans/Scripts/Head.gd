@@ -2,13 +2,12 @@ extends StaticBody2D
 
 const speech_bubble = preload("res://Scenes/Speech Bubble.tscn")
 
-var screen_size
 var middle
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
+	var screen_size = get_viewport_rect().size
 	middle = screen_size.x / 2
 
 

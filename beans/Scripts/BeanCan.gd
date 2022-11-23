@@ -3,7 +3,9 @@ extends RigidBody2D
 # Use this variable to check if this can has been "caught" yet
 var in_stack = false
 
-
+#Override of default behaviour
+func get_class():
+	return "Can"
 
 # Create joints between colliding rigid bodies so the stack is more "stable"
 # (Possible mechanic, you lose when hand dips past certain degree of tilt??)
