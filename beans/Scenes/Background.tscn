@@ -57,3 +57,31 @@ rotation = 0.218166
 
 [node name="BackoConversation12" parent="." instance=ExtResource( 2 )]
 position = Vector2( 676.667, 786.667 )
+
+[node name="BackoConversation13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1833.33, -500 )
+
+[node name="BackoConversation14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1840, 303.333 )
+rotation = -0.436332
+
+[node name="BackoConversation15" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1810, 1006.67 )
+rotation = 0.436332
+
+[node name="BackoConversation16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6.66666, 976.667 )
+
+[node name="BackoConversation17" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1980, 40 )
+scale = Vector2( -1, 1 )
+
+[node name="BackoConversation18" parent="." instance=ExtResource( 2 )]
+position = Vector2( -936.667, -986.667 )
+rotation = 0.328122
+scale = Vector2( -1, 1 )
+
+[node name="BackoConversation19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 436.667, -910 )
+rotation = -0.546288
+scale = Vector2( -1, 1 )
