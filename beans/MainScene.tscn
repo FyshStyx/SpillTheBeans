@@ -77,5 +77,3 @@ position = Vector2( 960, 84 )
 position = Vector2( 521, 585 )
 
 [connection signal="timeout" from="Timer" to="BeanSpawner" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer" to="testhead1" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer" to="testhead4" method="_on_Timer_timeout"]
