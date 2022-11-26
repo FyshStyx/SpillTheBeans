@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Backo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/BackoSwapTalkTimer.gd" type="Script" id=2]
+
+[node name="BackoConversation" type="Node2D"]
+
+[node name="BackoSwapTalkTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+script = ExtResource( 2 )
+
+[node name="Backo" parent="." instance=ExtResource( 1 )]
+position = Vector2( 80, 0 )
+playing = true
+
+[node name="Backo2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -80, 0 )
+rotation = -3.14159
+scale = Vector2( 0.3, -0.3 )
+animation = "Talking"
+playing = true
+
+[connection signal="timeout" from="BackoSwapTalkTimer" to="BackoSwapTalkTimer" method="_on_BackoSwapTalkTimer_timeout"]
+[connection signal="timeout" from="BackoSwapTalkTimer" to="Backo" method="_on_BackoSwapTalkTimer_timeout"]
+[connection signal="timeout" from="BackoSwapTalkTimer" to="Backo2" method="_on_BackoSwapTalkTimer_timeout"]
