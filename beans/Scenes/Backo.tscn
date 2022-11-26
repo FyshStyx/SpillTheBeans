@@ -6,15 +6,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "Talking",
-"speed": 4.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Listening",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Talking",
+"speed": 4.0
 } ]
 
 [node name="Backo" type="AnimatedSprite"]
