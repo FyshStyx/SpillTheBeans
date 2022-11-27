@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/HumanEar.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Sprites/ferdo.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/gorm.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/ewart.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/BeanCan.tscn" type="PackedScene" id=7]
 
 [node name="GameScene" type="Control"]
 anchor_right = 1.0
@@ -13,6 +14,9 @@ anchor_bottom = 1.0
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 300 )
+
+[node name="Can" parent="." instance=ExtResource( 7 )]
+position = Vector2( 593, 119 )
 
 [node name="HumanEar" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512, 300 )
