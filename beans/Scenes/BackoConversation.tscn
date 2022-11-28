@@ -11,10 +11,12 @@ autostart = true
 script = ExtResource( 2 )
 
 [node name="Backo" parent="." instance=ExtResource( 1 )]
+visible = true
 position = Vector2( 80, 0 )
 playing = true
 
 [node name="Backo2" parent="." instance=ExtResource( 1 )]
+visible = true
 position = Vector2( -80, 0 )
 rotation = -3.14159
 scale = Vector2( 0.3, -0.3 )
