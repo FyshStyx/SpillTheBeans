@@ -4,7 +4,6 @@
 [ext_resource path="res://Scripts/Spinning Wheel.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/icon.png" type="Texture" id=3]
 
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 300.0
 
@@ -48,21 +47,24 @@ shape = SubResource( 4 )
 rotation = -0.785398
 shape = SubResource( 4 )
 
-[node name="Icon" type="Sprite" parent="Spinning Wheel"]
+[node name="Node2D" type="Node2D" parent="Spinning Wheel"]
+visible = false
+
+[node name="Icon" type="Sprite" parent="Spinning Wheel/Node2D"]
 scale = Vector2( 0.28125, 2.90625 )
 texture = ExtResource( 3 )
 
-[node name="Icon2" type="Sprite" parent="Spinning Wheel"]
+[node name="Icon2" type="Sprite" parent="Spinning Wheel/Node2D"]
 rotation = 0.785398
 scale = Vector2( 0.28125, 2.90625 )
 texture = ExtResource( 3 )
 
-[node name="Icon3" type="Sprite" parent="Spinning Wheel"]
+[node name="Icon3" type="Sprite" parent="Spinning Wheel/Node2D"]
 rotation = -0.785398
 scale = Vector2( 0.28125, 2.90625 )
 texture = ExtResource( 3 )
 
-[node name="Icon4" type="Sprite" parent="Spinning Wheel"]
+[node name="Icon4" type="Sprite" parent="Spinning Wheel/Node2D"]
 rotation = 1.5708
 scale = Vector2( 0.28125, 2.90625 )
 texture = ExtResource( 3 )

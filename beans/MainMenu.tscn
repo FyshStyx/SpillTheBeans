@@ -14,6 +14,7 @@ position = Vector2( 512, 300 )
 
 [node name="Title" type="Sprite" parent="."]
 position = Vector2( 512, 150 )
+z_index = 2
 texture = ExtResource( 2 )
 
 [node name="Play" type="Button" parent="."]
