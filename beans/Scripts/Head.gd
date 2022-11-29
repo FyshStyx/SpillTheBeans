@@ -9,34 +9,11 @@ func _ready():
 	$"SpeechBubble".hide()
 
 
-func launch_can():
-	var new_can = can.instance()
-	new_can.set_position(get_position())
-	get_parent().add_child(new_can)
-	
-	var faces_right = facing_right()
-	var imp
-	if faces_right:
-		imp = Vector2(100,0)
-	else:
-		imp = Vector2(-100,0)
-	
-	new_can.apply_central_impulse(imp)
+func create_new_can(target_head):
+	update_speech_bubble(target_head)
+	flash_speech_bubble()
+	launch_can(target_head)
 
-
-# Use the nodes x-scale to determine whether the node is facing
-# left or right
-func facing_right():
-	var s = scale.x
-	var face_right
-	
-	if s > 0:
-		face_right = true
-	else:
-		face_right = false
-		
-	return face_right
-	
 
 # Change the sprite show in the speech bubble to match the target
 # of the can about to be created
@@ -53,6 +30,7 @@ func update_speech_bubble(target):
 		head_sprite.set_gorm()
 	
 
+
 # Displays the speech bubble to the player before auto-hiding
 func flash_speech_bubble():
 	#Access the speech bubble sprite and run its show method
@@ -60,12 +38,46 @@ func flash_speech_bubble():
 	#Acess the hide bubble timer and run its start method
 	$"HideBubble".start()
 	
-	
 
-func create_new_can(target_head):
-	update_speech_bubble(target_head)
-	flash_speech_bubble()
-	launch_can()
+
+func launch_can(target_head):
+	# Create new can instance
+	var new_can = can.instance()
+	# Move can to center of head. Due to z-axis, can will be behind
+	# the character sprite
+	new_can.set_position(get_position())
+	
+	# Add the target head information to the can
+	new_can.set_target_head(target_head)
+	
+	# Add can to the scene
+	get_parent().add_child(new_can)
+	
+	# Determine orientation of head on gamescene
+	var faces_right = facing_right()
+	var imp
+	if faces_right:
+		imp = Vector2(100,0)
+	else:
+		imp = Vector2(-100,0)
+	
+	# Yeet that bad body towards the ear
+	new_can.apply_central_impulse(imp)
+
+
+# Use the nodes x-scale to determine whether the node is facing
+# left or right
+func facing_right():
+	var s = scale.x
+	var face_right
+	
+	if s > 0:
+		face_right = true
+	else:
+		face_right = false
+		
+	return face_right
+
 
 
 # These signals were declared in the body of NewBeans.gd
