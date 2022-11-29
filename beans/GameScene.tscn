@@ -3,9 +3,9 @@
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/HumanEar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Bluford.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/ferdo.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/gorm.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/ewart.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Ferdo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Gorm.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Ewart.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/BeanCan.tscn" type="PackedScene" id=7]
 
 [node name="GameScene" type="Control"]
@@ -24,17 +24,22 @@ position = Vector2( 512, 300 )
 [node name="Bluford" parent="." instance=ExtResource( 3 )]
 position = Vector2( 76, 123 )
 
-[node name="Ewart" type="Sprite" parent="."]
+[node name="Ewart" parent="." instance=ExtResource( 6 )]
 position = Vector2( 76, 439 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 6 )
 
-[node name="Ferdo" type="Sprite" parent="."]
+[node name="Ferdo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 948, 123 )
-scale = Vector2( -0.05, 0.05 )
-texture = ExtResource( 4 )
+scale = Vector2( -1, 1 )
 
-[node name="Gorm" type="Sprite" parent="."]
+[node name="Gorm" parent="." instance=ExtResource( 5 )]
 position = Vector2( 948, 439 )
-scale = Vector2( -0.05, 0.05 )
-texture = ExtResource( 5 )
+scale = Vector2( -1, 1 )
+
+[node name="NewBeans" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="NewBeans" to="Bluford" method="_on_NewBeans_timeout" binds= [ "Bluford" ]]
+[connection signal="timeout" from="NewBeans" to="Ewart" method="_on_NewBeans_timeout" binds= [ "Ewart" ]]
+[connection signal="timeout" from="NewBeans" to="Ferdo" method="_on_NewBeans_timeout" binds= [ "Ferdo" ]]
+[connection signal="timeout" from="NewBeans" to="Gorm" method="_on_NewBeans_timeout" binds= [ "Gorm" ]]
