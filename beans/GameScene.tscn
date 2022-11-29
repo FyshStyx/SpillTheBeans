@@ -8,9 +8,7 @@
 [ext_resource path="res://Scenes/Ewart.tscn" type="PackedScene" id=6]
 [ext_resource path="res://NewBeans.gd" type="Script" id=8]
 
-[node name="GameScene" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="GameScene" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 300 )
@@ -26,11 +24,13 @@ position = Vector2( 76, 439 )
 
 [node name="Ferdo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 948, 123 )
-scale = Vector2( -1, 1 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
 
 [node name="Gorm" parent="." instance=ExtResource( 5 )]
 position = Vector2( 948, 439 )
-scale = Vector2( -1, 1 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
 
 [node name="NewBeans" type="Timer" parent="."]
 wait_time = 3.0

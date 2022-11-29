@@ -65,13 +65,13 @@ func launch_can(target_head):
 	new_can.apply_central_impulse(imp)
 
 
-# Use the nodes x-scale to determine whether the node is facing
+# Use the nodes rotation to determine whether the node is facing
 # left or right
 func facing_right():
-	var s = scale.x
+	var r = get_rotation()
 	var face_right
 	
-	if s > 0:
+	if r == 0:
 		face_right = true
 	else:
 		face_right = false
