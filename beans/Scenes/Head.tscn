@@ -24,10 +24,10 @@ position = Vector2( 300, 0 )
 scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 3 )
 
-[node name="HideBubble" type="Timer" parent="SpeechBubble"]
+[node name="HideBubble" type="Timer" parent="."]
 wait_time = 2.0
 __meta__ = {
 "_editor_description_": "When fired, activates the hide() method of parent sprite"
 }
 
-[connection signal="timeout" from="SpeechBubble/HideBubble" to="SpeechBubble" method="hide"]
+[connection signal="timeout" from="HideBubble" to="SpeechBubble" method="hide"]

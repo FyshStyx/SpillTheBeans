@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Ferdo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Gorm.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Ewart.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/BeanCan.tscn" type="PackedScene" id=7]
+[ext_resource path="res://NewBeans.gd" type="Script" id=8]
 
 [node name="GameScene" type="Control"]
 anchor_right = 1.0
@@ -14,9 +14,6 @@ anchor_bottom = 1.0
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 300 )
-
-[node name="Can" parent="." instance=ExtResource( 7 )]
-position = Vector2( 593, 119 )
 
 [node name="HumanEar" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512, 300 )
@@ -36,10 +33,12 @@ position = Vector2( 948, 439 )
 scale = Vector2( -1, 1 )
 
 [node name="NewBeans" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 autostart = true
+script = ExtResource( 8 )
 
-[connection signal="timeout" from="NewBeans" to="Bluford" method="_on_NewBeans_timeout" binds= [ "Bluford" ]]
-[connection signal="timeout" from="NewBeans" to="Ewart" method="_on_NewBeans_timeout" binds= [ "Ewart" ]]
-[connection signal="timeout" from="NewBeans" to="Ferdo" method="_on_NewBeans_timeout" binds= [ "Ferdo" ]]
-[connection signal="timeout" from="NewBeans" to="Gorm" method="_on_NewBeans_timeout" binds= [ "Gorm" ]]
+[connection signal="bluford_trigger" from="NewBeans" to="Bluford" method="_on_NewBeans_bluford_trigger"]
+[connection signal="ewart_trigger" from="NewBeans" to="Ewart" method="_on_NewBeans_ewart_trigger"]
+[connection signal="ferdo_trigger" from="NewBeans" to="Ferdo" method="_on_NewBeans_ferdo_trigger"]
+[connection signal="gorm_trigger" from="NewBeans" to="Gorm" method="_on_NewBeans_gorm_trigger"]
+[connection signal="timeout" from="NewBeans" to="NewBeans" method="_on_NewBeans_timeout"]
