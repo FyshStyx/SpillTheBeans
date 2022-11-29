@@ -37,6 +37,12 @@ wait_time = 3.0
 autostart = true
 script = ExtResource( 8 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 50.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Score"
+
 [connection signal="bluford_trigger" from="NewBeans" to="Bluford" method="_on_NewBeans_bluford_trigger"]
 [connection signal="ewart_trigger" from="NewBeans" to="Ewart" method="_on_NewBeans_ewart_trigger"]
 [connection signal="ferdo_trigger" from="NewBeans" to="Ferdo" method="_on_NewBeans_ferdo_trigger"]

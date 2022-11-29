@@ -21,11 +21,6 @@ func select_can():
 func unselect_can():
 	selected = false
 
-func d_select():
-	if selected == true:
-		queue_free()
-		
-
 # When can is clicked, highlight it
 func _on_Can_input_event(viewport, event, shape_idx):
 	
@@ -38,8 +33,6 @@ func _on_Can_input_event(viewport, event, shape_idx):
 			
 			# Call the select method for this particular can
 			self.select_can()
-			
-			get_tree().call_group("cans", "d_select")
 			
 			
 	
