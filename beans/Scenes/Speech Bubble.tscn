@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Sprites/icon.png" type="Texture" id=1]
-
-[node name="Speech Bubble" type="Sprite"]
-scale = Vector2( 5.1875, 1 )
-texture = ExtResource( 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bean can2.png-a33e18f9317a3c35cd675df2276bf589.stex"
+path="res://.import/speech bubble.png-fd6abffa8bd34ad532adc377f42f590c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/bean can2.png"
-dest_files=[ "res://.import/bean can2.png-a33e18f9317a3c35cd675df2276bf589.stex" ]
+source_file="res://Sprites/speech bubble.png"
+dest_files=[ "res://.import/speech bubble.png-fd6abffa8bd34ad532adc377f42f590c.stex" ]
 
 [params]
 
