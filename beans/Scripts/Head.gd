@@ -79,6 +79,21 @@ func facing_right():
 	return face_right
 
 
+# TODO pull can towards head
+# When can is clicked, make it emit a signal to all heads
+# causing them to glow
+# When a head is clicked make it so any selected can
+# (which should only ever be one - although there may be
+# a specific way to reduce method calls here) is immediately moved
+# here. If that can is at the correct target head, increment score by 1
+# otherwise game over
+#Note need to make sure I adjust game so that you can't pick
+# cans while they are in head hitbox (otherwise you might change can
+# selection when just trying to select a head)
+# maybe make cans unpickable until they hit the gravity well?
+# could scale them up to size when they hit the gravity well
+# to make it more obvious you can't click them yet
+
 
 # These signals were declared in the body of NewBeans.gd
 # I then connected them through the editor (non-advanced mode)

@@ -14,6 +14,10 @@ config/name="beans"
 run/main_scene="res://MainMenu.tscn"
 config/icon="res://Sprites/logo.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/stretch/mode="2d"
