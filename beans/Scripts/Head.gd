@@ -43,15 +43,16 @@ func flash_speech_bubble():
 func launch_can(target_head):
 	# Create new can instance
 	var new_can = can.instance()
+	
+	# Add can to the scene
+	get_parent().add_child(new_can)
+	
 	# Move can to center of head. Due to z-axis, can will be behind
 	# the character sprite
 	new_can.set_position(get_position())
 	
 	# Add the target head information to the can
 	new_can.set_target_head(target_head)
-	
-	# Add can to the scene
-	get_parent().add_child(new_can)
 	
 	# Make unpickable
 	new_can.set_pickable(false)
@@ -83,20 +84,16 @@ func facing_right():
 
 
 # TODO pull can towards head
-# When can is clicked, make it emit a signal to all heads
-# causing them to glow
 # When a head is clicked make it so any selected can
 # (which should only ever be one - although there may be
 # a specific way to reduce method calls here) is immediately moved
 # here. If that can is at the correct target head, increment score by 1
 # otherwise game over
-#Note need to make sure I adjust game so that you can't pick
-# cans while they are in head hitbox (otherwise you might change can
-# selection when just trying to select a head)
-# maybe make cans unpickable until they hit the gravity well?
-# could scale them up to size when they hit the gravity well
-# to make it more obvious you can't click them yet
-
+func _on_Head_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			# For every can in scene, run its "attempt_eat" function
+			get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME, "cans", "attempt_eat", get_name())
 
 # These signals were declared in the body of NewBeans.gd
 # I then connected them through the editor (non-advanced mode)
@@ -115,3 +112,6 @@ func _on_NewBeans_ferdo_trigger(target_head):
 
 func _on_NewBeans_gorm_trigger(target_head):
 	create_new_can(target_head)
+
+
+

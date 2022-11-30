@@ -13,6 +13,7 @@ func _ready():
 	light_tween = $Tween
 	tween_values = [Color(1,1,1,1), Color(2,2,2,1)]
 
+
 func set_target_head(head):
 	target_head = head
 	
@@ -27,6 +28,21 @@ func unselect_can():
 
 func get_name():
 	return "bean_can"
+
+# If the can should be eaten by given head, increment score by 1
+# if can shouldn't be eaten cause a gameover. Only run if can is
+# actively selected
+func attempt_eat(head):
+	if selected == true:
+		if target_head == head:
+			print("Correct head!")
+			# Todo figure out how to trigger a signal to increase score
+		else:
+			print("Wrong head")
+			print("Can target = %s" % target_head)
+			print("Selected head = %s" % head)
+			get_tree().paused = true
+
 
 # Go from no glow to glow. Triggered by clicking the can
 func start_glow():

@@ -30,4 +30,5 @@ __meta__ = {
 "_editor_description_": "When fired, activates the hide() method of parent sprite"
 }
 
+[connection signal="input_event" from="." to="." method="_on_Head_input_event"]
 [connection signal="timeout" from="HideBubble" to="SpeechBubble" method="hide"]
