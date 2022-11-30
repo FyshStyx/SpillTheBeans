@@ -70,7 +70,7 @@ func stop_glowing_immediate():
 		
 
 # When can is clicked, highlight it
-func _on_Can_input_event(viewport, event, shape_idx):
+func _on_Can_input_event(_viewport, event, _shape_idx):
 	
 	if event is InputEventMouseButton:
 		if event.pressed:

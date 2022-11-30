@@ -2,11 +2,14 @@ extends Area2D
 
 
 var can = preload("res://Scenes/BeanCan.tscn")
-
+var light_tween
+var tween_values
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$"SpeechBubble".hide()
+	light_tween = $Tween
+	tween_values = [Color(1,1,1,1), Color(2,2,2,1)]
 
 
 func create_new_can(target_head):
@@ -112,6 +115,41 @@ func _on_NewBeans_ferdo_trigger(target_head):
 
 func _on_NewBeans_gorm_trigger(target_head):
 	create_new_can(target_head)
+
+
+
+# Go from no glow to glow. Triggered by hovering over the head
+func start_glow():
+	# Note that we are blindly tageting the node Character
+	# this is not a node in Head, but it is a node in all of our characters
+	# there is probably a safer way to do this by inheriting this script into 
+	# a subscript which all our characters could use - but since
+	# this Jam is almost over we just gonna do this
+	# P.S The reason I do this is so the speech bubble doesn't glow, just the character sprite
+	light_tween.interpolate_property($Character, "modulate", tween_values[0], tween_values[1], 1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	light_tween.start()
+
+# When the tween finishes, swap the order of the values in the list
+# this effectively swaps the start and end color values
+# e.g. started at no glow, end at glow - need to swap for next tween run
+func _on_Tween_tween_completed(_object, _key):
+	tween_values.invert()
+	start_glow()
+
+func _on_Head_mouse_entered():
+	start_glow()
+
+# Stop tween and forcibly set modulate to default (remove glow basically)
+func _on_Head_mouse_exited():
+	print("Mouse exited")
+	# Check if the tween is actually running
+	if light_tween.is_active():
+		print("Detected active tween")
+		# Stop tween and remove from can (better than stop as stop just pauses the running tween
+		# so it will cause problems if we try to initialise another one from start glow)
+		light_tween.remove_all()
+		# Reset can modulate to default
+		$Character.set_modulate(Color(1,1,1,1))
 
 
 
