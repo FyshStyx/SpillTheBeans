@@ -53,6 +53,9 @@ func launch_can(target_head):
 	# Add can to the scene
 	get_parent().add_child(new_can)
 	
+	# Make unpickable
+	new_can.set_pickable(false)
+	
 	# Determine orientation of head on gamescene
 	var faces_right = facing_right()
 	var imp
