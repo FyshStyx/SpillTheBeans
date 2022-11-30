@@ -4,14 +4,17 @@ extends RigidBody2D
 var target_head
 var selected
 var light_tween
+var move_tween
 var tween_values
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target_head = "None"
 	selected = false
-	light_tween = $Tween
+	light_tween = $LightTween
+	move_tween = $MoveTween
 	tween_values = [Color(1,1,1,1), Color(2,2,2,1)]
+
 
 
 func set_target_head(head):
@@ -32,17 +35,36 @@ func get_name():
 # If the can should be eaten by given head, increment score by 1
 # if can shouldn't be eaten cause a gameover. Only run if can is
 # actively selected
-func attempt_eat(head):
+func attempt_eat(head, head_position):
 	if selected == true:
 		if target_head == head:
-			print("Correct head!")
-			# Todo figure out how to trigger a signal to increase score
+			# Stop the glowing
+			stop_glowing_immediate()
+			
+			# Make can unpickable
+			set_pickable(false)
+			
+			# Make can have no collisions + be static object
+			$"CollisionShape2D".set_disabled(true)
+			set_mode(RigidBody2D.MODE_STATIC)
+			
+			# Use tween to move can to head
+			move_tween.interpolate_property(self, "position", position, head_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			move_tween.start()
+			
+			# Add one to score
+			get_tree().call_group("score", "add_score")
+			
 		else:
 			print("Wrong head")
 			print("Can target = %s" % target_head)
 			print("Selected head = %s" % head)
 			get_tree().paused = true
 
+# On a successful move, once the can reaches the head
+# delete it from the game scene
+func _on_MoveTween_tween_completed(object, key):
+	queue_free()
 
 # Go from no glow to glow. Triggered by clicking the can
 func start_glow():
@@ -90,4 +112,7 @@ func _on_Can_input_event(_viewport, event, _shape_idx):
 			
 	
 	
+
+
+
 

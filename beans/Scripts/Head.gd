@@ -96,7 +96,7 @@ func _on_Head_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed:
 			# For every can in scene, run its "attempt_eat" function
-			get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME, "cans", "attempt_eat", get_name())
+			get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME, "cans", "attempt_eat", get_name(), position)
 
 # These signals were declared in the body of NewBeans.gd
 # I then connected them through the editor (non-advanced mode)
@@ -148,7 +148,7 @@ func _on_Head_mouse_exited():
 		# Stop tween and remove from can (better than stop as stop just pauses the running tween
 		# so it will cause problems if we try to initialise another one from start glow)
 		light_tween.remove_all()
-		# Reset can modulate to default
+		# Reset head sprite modulate to default
 		$Character.set_modulate(Color(1,1,1,1))
 
 
