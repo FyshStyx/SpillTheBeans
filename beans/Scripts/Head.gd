@@ -38,6 +38,10 @@ func update_speech_bubble(target):
 func flash_speech_bubble():
 	#Access the speech bubble sprite and run its show method
 	$"SpeechBubble".show()
+	
+	#Access the head sprite and start its talking animation
+	$"Character".start_talking()
+	
 	#Acess the hide bubble timer and run its start method
 	$"HideBubble".start()
 	
@@ -141,10 +145,8 @@ func _on_Head_mouse_entered():
 
 # Stop tween and forcibly set modulate to default (remove glow basically)
 func _on_Head_mouse_exited():
-	print("Mouse exited")
 	# Check if the tween is actually running
 	if light_tween.is_active():
-		print("Detected active tween")
 		# Stop tween and remove from can (better than stop as stop just pauses the running tween
 		# so it will cause problems if we try to initialise another one from start glow)
 		light_tween.remove_all()
