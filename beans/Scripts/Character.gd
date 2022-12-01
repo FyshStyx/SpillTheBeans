@@ -1,5 +1,6 @@
 extends AnimatedSprite
 
+var audio_player
 
 func _ready():
 	set_animation("default")
