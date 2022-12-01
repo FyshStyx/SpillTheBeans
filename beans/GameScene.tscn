@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/HumanEar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Blabbo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Bluford.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Ferdo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Gorm.tscn" type="PackedScene" id=5]
@@ -45,11 +45,12 @@ script = ExtResource( 7 )
 
 [node name="Game" type="Node2D" parent="."]
 material = SubResource( 3 )
+z_index = -4
 
 [node name="Background" parent="Game" instance=ExtResource( 1 )]
 position = Vector2( 512, 300 )
 
-[node name="HumanEar" parent="Game" instance=ExtResource( 2 )]
+[node name="Blabbo" parent="Game" instance=ExtResource( 2 )]
 position = Vector2( 512, 300 )
 
 [node name="Bluford" parent="Game" instance=ExtResource( 3 )]

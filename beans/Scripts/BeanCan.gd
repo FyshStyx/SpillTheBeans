@@ -5,7 +5,9 @@ var target_head
 var selected
 var light_tween
 var move_tween
+var scale_tween
 var tween_values
+var default_sprite_scale
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,9 +15,18 @@ func _ready():
 	selected = false
 	light_tween = $LightTween
 	move_tween = $MoveTween
+	scale_tween = $ScaleTween
 	tween_values = [Color(1,1,1,1), Color(2,2,2,1)]
+	
+	# When a can is created, it should start at a small scale
+	# to suggest to player they can't click it yet
+	default_sprite_scale = $BeanCan.get_scale()
+	$BeanCan.set_scale(default_sprite_scale / 2)
 
-
+# Use this when can enters gravity well to appear normal again
+func return_to_default_sprite_scale():
+	scale_tween.interpolate_property($BeanCan, "scale", $BeanCan.scale, default_sprite_scale, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	scale_tween.start()
 
 func set_target_head(head):
 	target_head = head
@@ -31,6 +42,7 @@ func unselect_can():
 
 func get_name():
 	return "bean_can"
+	
 
 # If the can should be eaten by given head, increment score by 1
 # if can shouldn't be eaten cause a gameover. Only run if can is

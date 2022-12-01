@@ -27,6 +27,8 @@ shape = SubResource( 1 )
 
 [node name="MoveTween" type="Tween" parent="."]
 
+[node name="ScaleTween" type="Tween" parent="."]
+
 [connection signal="input_event" from="." to="." method="_on_Can_input_event"]
 [connection signal="tween_completed" from="LightTween" to="." method="_on_Tween_tween_completed"]
 [connection signal="tween_completed" from="MoveTween" to="." method="_on_MoveTween_tween_completed"]
