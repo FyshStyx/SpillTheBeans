@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Blabbo.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scripts/ScoreBoard.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Fonts/game_screen.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Scenes/Beans.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Shader" id=2]
 code = "shader_type canvas_item;
@@ -49,6 +50,9 @@ z_index = -4
 
 [node name="Background" parent="Game" instance=ExtResource( 1 )]
 position = Vector2( 512, 300 )
+
+[node name="Beans" parent="Game" instance=ExtResource( 12 )]
+position = Vector2( 512, 1000 )
 
 [node name="Blabbo" parent="Game" instance=ExtResource( 2 )]
 position = Vector2( 512, 300 )

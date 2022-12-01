@@ -6,6 +6,7 @@ extends Node
 var current_scene = null
 var background_animation = true
 var bean_time = 3
+var beans = 0
 
 func _ready():
 	var root = get_tree().get_root()
@@ -26,7 +27,22 @@ func set_bean_time(t):
 	
 func get_bean_time():
 	return bean_time
+	
+# Increment total count of cans
+func add_can():
+	beans += 1
+	
+	if beans > 10:
+		get_tree().call_group("end_game", "game_over")
+	
+func remove_can():
+	beans -= 1
+	
+func get_cans():
+	return beans
 
+func set_cans(i):
+	beans = i
 
 func goto_scene(path):
 	# This function will usually be called from a signal callback,

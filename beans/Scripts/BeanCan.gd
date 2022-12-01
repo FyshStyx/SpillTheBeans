@@ -50,6 +50,12 @@ func get_name():
 func attempt_eat(head, head_position):
 	if selected == true:
 		if target_head == head:
+			# No longer count the can as part of the 10 limit
+			Global.remove_can()
+			
+			#Update the floating bean animation height
+			get_tree().call_group("really_bad_signal", "move_beans")
+			
 			# Stop the glowing
 			stop_glowing_immediate()
 			

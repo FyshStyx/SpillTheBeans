@@ -20,6 +20,11 @@ func game_over():
 	var  string_score = String(score)
 	
 	$FinalScore.set_text(string_score)
+	
+	#Reset the global vars in case play again (annoying bug do this a better way
+	#if you have time)
+	Global.set_bean_time(3)
+	Global.set_cans(0)
 
 
 func _on_Play_Again_pressed():
