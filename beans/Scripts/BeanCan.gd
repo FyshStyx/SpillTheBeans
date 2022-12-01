@@ -72,7 +72,7 @@ func attempt_eat(head, head_position):
 
 # On a successful move, once the can reaches the head
 # delete it from the game scene
-func _on_MoveTween_tween_completed(object, key):
+func _on_MoveTween_tween_completed(_object, _key):
 	queue_free()
 
 # Go from no glow to glow. Triggered by clicking the can
@@ -83,7 +83,7 @@ func start_glow():
 # When the tween finishes, swap the order of the values in the list
 # this effectively swaps the start and end color values
 # e.g. started at no glow, end at glow - need to swap for next tween run
-func _on_Tween_tween_completed(object, key):
+func _on_Tween_tween_completed(_object, _key):
 	tween_values.invert()
 	start_glow()
 

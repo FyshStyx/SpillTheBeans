@@ -39,7 +39,7 @@ func _on_NewBeans_timeout():
 	
 	# Make next signal fire slightly sooner (up to a minimum time of 1 second)
 	if wait_time > 1:
-		wait_time = wait_time - 0.05
+		wait_time = wait_time - 0.1
 		Global.set_bean_time(wait_time)
 
 # Update the next source/target pair by generating two indicies

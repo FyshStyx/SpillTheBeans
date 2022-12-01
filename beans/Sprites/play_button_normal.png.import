@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/home.png-bf563d703898343cb5279fe27fe33750.stex"
+path="res://.import/play_button_normal.png-de63e78e7901522a3ec5ee60be69588b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/home.png"
-dest_files=[ "res://.import/home.png-bf563d703898343cb5279fe27fe33750.stex" ]
+source_file="res://Sprites/play_button_normal.png"
+dest_files=[ "res://.import/play_button_normal.png-de63e78e7901522a3ec5ee60be69588b.stex" ]
 
 [params]
 

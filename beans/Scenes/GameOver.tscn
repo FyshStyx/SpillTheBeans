@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/game over.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/retry2.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/home.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/retry.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/home2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/retry_press.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/home_normal.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/retry_normal.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/home_pressed.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/end_score.tres" type="DynamicFont" id=7]
 
 [node name="GameOver" type="Control" groups=["end_game"]]

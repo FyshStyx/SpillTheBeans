@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ear.png-629fdba6bbada8e6de7ddff45235cd46.stex"
+path="res://.import/home_normal.png-43df762b64ccfb79361c69f2db2b5a64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ear.png"
-dest_files=[ "res://.import/ear.png-629fdba6bbada8e6de7ddff45235cd46.stex" ]
+source_file="res://Sprites/home_normal.png"
+dest_files=[ "res://.import/home_normal.png-43df762b64ccfb79361c69f2db2b5a64.stex" ]
 
 [params]
 

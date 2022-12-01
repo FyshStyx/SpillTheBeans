@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/play button.png-f573e5a9271b7e27ed8ee9a1a7440027.stex"
+path="res://.import/retry_normal.png-d93e8fa93cf78e9f5fb1b794e03bd06f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/play button.png"
-dest_files=[ "res://.import/play button.png-f573e5a9271b7e27ed8ee9a1a7440027.stex" ]
+source_file="res://Sprites/retry_normal.png"
+dest_files=[ "res://.import/retry_normal.png-d93e8fa93cf78e9f5fb1b794e03bd06f.stex" ]
 
 [params]
 
