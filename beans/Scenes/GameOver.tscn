@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/game over.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Sprites/retry_normal.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/home_pressed.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/end_score.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Audio/game_over.wav" type="AudioStream" id=8]
 
 [node name="GameOver" type="Control" groups=["end_game"]]
 pause_mode = 2
@@ -47,6 +48,9 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 7 )
 align = 1
 valign = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="ScaleHelper/Play Again" to="." method="_on_Play_Again_pressed"]
 [connection signal="pressed" from="ScaleHelper/Play Home" to="." method="_on_Play_Home_pressed"]

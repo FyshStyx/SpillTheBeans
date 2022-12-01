@@ -12,6 +12,7 @@ func _on_Play_pressed():
 
 
 func _on_CheckButton_toggled(button_pressed):
+	$AudioStreamPlayer._set_playing(true)
 	if button_pressed:
 		Global.set_background_animation(true)
 		$Background/Conversations.show()

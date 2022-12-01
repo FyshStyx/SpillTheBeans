@@ -10,6 +10,7 @@ func _ready():
 
 
 func add_score():
+	$AudioStreamPlayer._set_playing(true)
 	total_score += 1
 	set_text("Score: %s" % total_score)
 

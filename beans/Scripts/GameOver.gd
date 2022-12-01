@@ -14,6 +14,9 @@ func game_over():
 	# Reveal game over pop-up
 	show()
 	
+	# Play audio
+	$AudioStreamPlayer._set_playing(true)
+	
 	#Change text in game over screen
 	var score = get_tree().get_root().get_node("GameScene/ScoreBoard").get_score()
 	
