@@ -59,7 +59,7 @@ func attempt_eat(head, head_position):
 			print("Wrong head")
 			print("Can target = %s" % target_head)
 			print("Selected head = %s" % head)
-			get_tree().paused = true
+			get_tree().call_group("end_game", "game_over")
 
 # On a successful move, once the can reaches the head
 # delete it from the game scene

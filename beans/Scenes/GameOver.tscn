@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/icon.png" type="Texture" id=2]
+
+[node name="GameOver" type="Control" groups=["end_game"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Icon" type="Sprite" parent="."]
+scale = Vector2( 4.89063, 7.76562 )
+texture = ExtResource( 2 )
+
+[node name="Play Again" type="Button" parent="."]
+margin_left = -119.0
+margin_top = 149.0
+margin_right = -15.0
+margin_bottom = 219.0
+text = "play again"
+
+[node name="Play Home" type="Button" parent="."]
+margin_left = 23.0
+margin_top = 149.0
+margin_right = 127.0
+margin_bottom = 219.0
+text = "home"
+
+[connection signal="pressed" from="Play Again" to="." method="_on_Play_Again_pressed"]
+[connection signal="pressed" from="Play Home" to="." method="_on_Play_Home_pressed"]

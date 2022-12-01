@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Murmuring And Talking Men.mp3-33d349631f9f0bbf61e2eae2e40329e2.mp3str"
+
+[deps]
+
+source_file="res://Audio/Murmuring And Talking Men.mp3"
+dest_files=[ "res://.import/Murmuring And Talking Men.mp3-33d349631f9f0bbf61e2eae2e40329e2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

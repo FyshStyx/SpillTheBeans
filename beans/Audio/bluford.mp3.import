@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bluford.mp3-40354f9ceeba80f2e88ec9f837cc2faa.mp3str"
+
+[deps]
+
+source_file="res://Audio/bluford.mp3"
+dest_files=[ "res://.import/bluford.mp3-40354f9ceeba80f2e88ec9f837cc2faa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

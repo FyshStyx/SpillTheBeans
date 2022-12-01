@@ -9,12 +9,12 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "Talking",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Listening",
-"speed": 5.0
+"speed": 4.0
 } ]
 
 [node name="Backo" type="AnimatedSprite"]
