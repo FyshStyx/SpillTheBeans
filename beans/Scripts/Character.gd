@@ -15,14 +15,18 @@ func start_talking():
 	# Start animation
 	_set_playing(true)
 	
+	get_parent().get_node("TalkAudio")._set_playing(true)
+	get_parent().get_node("TalkTimer").start()
+	
 	
 
 func stop_talking():
 	set_animation("default")
 	_set_playing(false)
+	
+	get_parent().get_node("TalkAudio")._set_playing(false)
+	
 
-# When the speech bubble is hidden, stops the mouth from moving
-# this signal was manually attached in each character - could have been
-# easier if I included the character sprite in the parent head class
-func _on_HideBubble_timeout():
+
+func _on_TalkTimer_timeout():
 	stop_talking()

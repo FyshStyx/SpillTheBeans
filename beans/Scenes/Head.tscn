@@ -34,6 +34,8 @@ __meta__ = {
 
 [node name="TalkAudio" type="AudioStreamPlayer" parent="."]
 
+[node name="TalkTimer" type="Timer" parent="."]
+
 [connection signal="input_event" from="." to="." method="_on_Head_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Head_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Head_mouse_exited"]
