@@ -36,6 +36,11 @@ func _on_NewBeans_timeout():
 	
 	# Update the signal for next firing
 	generate_new_source_and_target()
+	
+	# Make next signal fire slightly sooner (up to a minimum time of 1 second)
+	if wait_time > 1:
+		wait_time = wait_time - 0.2
+		Global.set_bean_time(wait_time)
 
 # Update the next source/target pair by generating two indicies
 # to select characters from our character list

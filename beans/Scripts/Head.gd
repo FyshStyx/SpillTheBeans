@@ -10,12 +10,15 @@ func _ready():
 	$"SpeechBubble".hide()
 	light_tween = $Tween
 	tween_values = [Color(1,1,1,1), Color(2,2,2,1)]
+	#Sync the speech bubble timer to the bean spawner time
+	$HideBubble.set_wait_time(Global.get_bean_time() / 2)
 
 
 func create_new_can(target_head):
 	update_speech_bubble(target_head)
 	flash_speech_bubble()
 	launch_can(target_head)
+	
 
 
 # Change the sprite show in the speech bubble to match the target
@@ -155,3 +158,7 @@ func _on_Head_mouse_exited():
 
 
 
+
+#Sync the speech bubble timer to the bean spawner time
+func _on_HideBubble_timeout():
+	$HideBubble.set_wait_time(Global.get_bean_time() / 2)

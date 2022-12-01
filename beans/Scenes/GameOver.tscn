@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/game over.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Sprites/home.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/retry.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/home2.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/end_score.tres" type="DynamicFont" id=7]
 
 [node name="GameOver" type="Control" groups=["end_game"]]
 pause_mode = 2
@@ -43,6 +44,7 @@ margin_top = -35.0
 margin_right = 114.0
 margin_bottom = 87.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
 align = 1
 valign = 1
 

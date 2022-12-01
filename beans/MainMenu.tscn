@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/title.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/play button.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/play button2.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/main_menu.tres" type="DynamicFont" id=6]
 
 [node name="Main menu" type="Control"]
 anchor_right = 1.0
@@ -20,16 +21,17 @@ z_index = 2
 texture = ExtResource( 2 )
 
 [node name="CheckButton" type="CheckButton" parent="."]
-margin_left = 425.0
-margin_top = 420.0
-margin_right = 594.0
-margin_bottom = 460.0
+margin_left = 410.0
+margin_top = 417.0
+margin_right = 639.0
+margin_bottom = 467.0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
 pressed = true
 text = "Background is"
 

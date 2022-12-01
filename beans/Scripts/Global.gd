@@ -5,6 +5,7 @@ extends Node
 
 var current_scene = null
 var background_animation = true
+var bean_time = 3
 
 func _ready():
 	var root = get_tree().get_root()
@@ -18,6 +19,13 @@ func get_background_animation():
 	return background_animation
 	
 	
+# Use this global getter and setter to make sure mouth animation timing is synced
+# with bean spawning so no overlaps.
+func set_bean_time(t):
+	bean_time = t
+	
+func get_bean_time():
+	return bean_time
 
 
 func goto_scene(path):

@@ -23,8 +23,10 @@ func game_over():
 
 
 func _on_Play_Again_pressed():
+	get_tree().paused = false
 	Global.goto_scene("res://GameScene.tscn")
 
 
 func _on_Play_Home_pressed():
+	get_tree().paused = false
 	Global.goto_scene("res://MainMenu.tscn")

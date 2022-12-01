@@ -56,9 +56,6 @@ func attempt_eat(head, head_position):
 			get_tree().call_group("score", "add_score")
 			
 		else:
-			print("Wrong head")
-			print("Can target = %s" % target_head)
-			print("Selected head = %s" % head)
 			get_tree().call_group("end_game", "game_over")
 
 # On a successful move, once the can reaches the head
